@@ -11,7 +11,7 @@ RUN cd /app \
     && CI=true npm run build \
     && npm cache clean --force
 
-FROM nginx:stable
+FROM nginx-unprivileged:stable
 
 LABEL maintainer="info@cert.pl"
 
